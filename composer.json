@@ -1,0 +1,24 @@
+{
+    "name": "peterkahl/season-info-multilingual",
+    "type": "library",
+    "description": "Translates name of season to 16 languages and scripts.",
+    "keywords": ["i18n", "multilingual", "multilingual-websites", "season-info", "seasons"],
+    "homepage": "https://github.com/peterkahl/Season-Info-Multilingual",
+    "license": "Apache License Version 2.0",
+    "authors": [
+        {
+            "name": "Peter Kahl",
+            "email": "peter.kahl@colossalmind.com",
+            "homepage": "https://www.colossalmind.com/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "peterkahl\\SeasonInfo\\": "src/"
+        }
+    }
+}
