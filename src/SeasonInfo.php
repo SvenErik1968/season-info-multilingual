@@ -4,7 +4,7 @@
  *
  * Translates name of season to 16 languages and scripts.
  *
- * @version    1.0 (2017-05-04 01:01:00 GMT)
+ * @version    1.1 (2017-05-04 07:45:00 GMT)
  * @author     Peter Kahl <peter.kahl@colossalmind.com>
  * @since      2017
  * @license    Apache License, Version 2.0
@@ -57,7 +57,7 @@ class SeasonInfo {
     if ($lang == 'zh-tw' || $lang == 'zh-mo') {
       $lang = 'zh-hk';
     }
-    if ($lang == 'zh-sg' || $lang == 'zh') {
+    elseif ($lang == 'zh-sg' || $lang == 'zh') {
       $lang = 'zh-cn';
     }
     if (in_array($lang, $available)) {
