@@ -4,7 +4,7 @@
     "description": "Translates name of season to 16 languages and scripts.",
     "keywords": ["i18n", "multilingual", "multilingual-websites", "season-info", "seasons"],
     "homepage": "https://github.com/peterkahl/Season-Info-Multilingual",
-    "license": "Apache License Version 2.0",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "Peter Kahl",
