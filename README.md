@@ -1,6 +1,6 @@
 # Season-Info-Multilingual
 
-Translates name of season to 16 languages and scripts.
+Translates name of season to 19 languages and scripts.
 
 ## Usage
 
