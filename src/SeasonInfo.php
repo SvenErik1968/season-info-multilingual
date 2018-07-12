@@ -2,14 +2,14 @@
 /**
  * Season Info (Multilingual)
  *
- * Translates name of season to 16 languages and scripts.
+ * Translates name of season to 19 languages and scripts.
  *
- * @version    1.1 (2017-05-04 07:45:00 GMT)
- * @author     Peter Kahl <peter.kahl@colossalmind.com>
+ * @version    2018-0712 12:32:00 GMT
+ * @author     Peter Kahl <https://github.com/peterkahl>
  * @since      2017
  * @license    Apache License, Version 2.0
  *
- * Copyright 2017 Peter Kahl <peter.kahl@colossalmind.com>
+ * Copyright 2017-2018 Peter Kahl <https://github.com/peterkahl>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,12 +30,12 @@ use \Exception;
 
 class SeasonInfo {
 
-  #===================================================================
 
   private static function ValidateLanguage($lang) {
     $available = array(
       'ar',
       'cs',
+      'cy',
       'da',
       'de',
       'en',
@@ -70,7 +70,6 @@ class SeasonInfo {
     throw new Exception('Invalid argument lang');
   }
 
-  #===================================================================
 
   /**
    * turns en_GB --> en-gb
@@ -81,11 +80,10 @@ class SeasonInfo {
     return str_replace('_', '-', $str);
   }
 
-  #===================================================================
 
   public static function getName($key, $lang = 'en') {
     $lang = self::ValidateLanguage($lang);
-    #----
+
     if ($lang == 'zh-hk') {
       $text = array(
         'spring' => '春天',
@@ -206,7 +204,7 @@ class SeasonInfo {
         'winter' => 'zima',
       );
     }
-    elseif ($lang == 'en-gb') {
+    elseif ($lang == 'en-gb' || $lang == 'en') {
       $text = array(
         'spring' => 'spring',
         'summer' => 'summer',
@@ -214,7 +212,7 @@ class SeasonInfo {
         'winter' => 'winter',
       );
     }
-    elseif ($lang == 'en-us' || $lang == 'en') {
+    elseif ($lang == 'en-us') {
       $text = array(
         'spring' => 'spring',
         'summer' => 'summer',
@@ -222,14 +220,21 @@ class SeasonInfo {
         'winter' => 'winter',
       );
     }
-    #----
+    elseif ($lang == 'cy') {
+      $text = array(
+        'spring' => 'gwanwyn',
+        'summer' => 'haf',
+        'autumn' => 'hydref',
+        'winter' => 'gaeaf',
+      );
+    }
+
     $key = strtolower($key);
     if (!array_key_exists($key, $text)) {
       throw new Exception('Illegal value key');
     }
+
     return $text[$key];
   }
-
-  #===================================================================
 
 }
