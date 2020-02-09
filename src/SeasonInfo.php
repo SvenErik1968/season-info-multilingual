@@ -47,6 +47,7 @@ class SeasonInfo {
       'it',
       'ja',
       'nl',
+      'no',
       'pt',
       'ru',
       'sk',
@@ -178,6 +179,14 @@ class SeasonInfo {
         'summer' => 'zomer',
         'autumn' => 'herfst',
         'winter' => 'winter',
+      );
+    }
+    elseif ($lang == 'no') {
+      $text = array(
+        'spring' => 'vår',
+        'summer' => 'sommer',
+        'autumn' => 'høst',
+        'winter' => 'vinter',
       );
     }
     elseif ($lang == 'ru') {
