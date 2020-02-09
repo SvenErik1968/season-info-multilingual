@@ -18,6 +18,7 @@ Translates name of season into 18 languages and scripts.
 * Italian (italiano)
 * Japanese (日本語)
 * Dutch (Nederlands)
+* Norwegian (norsk)
 * Portuguese (Português)
 * Russian (русский)
 * Slovak (slovenčina)
